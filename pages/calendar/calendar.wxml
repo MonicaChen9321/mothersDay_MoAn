@@ -1,0 +1,10 @@
+<!--pages/calendar/calendar.wxml-->
+<!-- <text>pages/calendar/calendar.wxml</text> -->
+<!-- <view>
+  <view>{{date}}</view>
+  <view></view>
+</view> -->
+
+<!-- <van-button type="primary">button</van-button> -->
+
+<weekCalendar timeBean="{{timeBean}}" bind:lastWeek="lastWeek" bind:nextWeek="nextWeek" bind:dayClick="dayClick"></weekCalendar>

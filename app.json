@@ -1,8 +1,27 @@
 {
   "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/calendar/calendar",
+    "pages/profile/profile"
   ],
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/calendar/calendar",
+      "iconPath": "/pages/images/calendar.png",
+      "selectedIconPath": "/pages/images/calendar_select.png"
+    },{
+      "pagePath": "pages/profile/profile",
+      "iconPath": "/pages/images/profile.png",
+      "selectedIconPath": "/pages/images/profile_select.png"
+    }]
+  },
+
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-calendar": "@vant/weapp/calendar/index",
+    "weekCalendar": "components/weekCalendar/weekCalendar"
+  },
+
+
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
@@ -18,6 +37,5 @@
  },
 
 
-  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
