@@ -1,11 +1,19 @@
 <!--compoents/weekCalendar/weekCalendar.wxml-->
-<view class='line'></view>
+<!-- <view class='line'></view> -->
  
-<view class='row'>
-  <view>{{timeBean.weekDayList[timeBean.selectDay].day}}</view>
-  <view>{{timeBean.month}}</view>
-  <view>{{timeBean.year}}</view>
-  <button class = 'todayButton'>Today</button>
+<view class='row-title'>
+  <view class='row-title'>
+    <view class='date-title'>{{timeBean.nowDay}}</view>
+    <view class='monthyear-title'>
+      <!-- <view>{{timeBean.month}}</view> -->
+      <view>{{timeBean.nowWeek}}</view>
+      <view class = 'row-title'>
+        <view>{{timeBean.nowMonth}}</view>
+        <view>{{timeBean.nowYear}}</view>
+      </view>
+    </view>
+  </view>
+  <view class = 'todayButton' bindtap='todayClick'>Today</view>
 </view>
 
 <view class='row'>
@@ -22,7 +30,7 @@
  
 <view class='row'>
     <view  wx:for="0123456" data-index="{{index}}" class='{{index==timeBean.selectDay?"select-column":"column"}}' bindtap='itemClick'>
-      <view class='weekType'>{{timeBean.weekDayList[index].week}}</view>
+      <view class='{{index==timeBean.selectDay?"select-weekType":"weekType"}}'>{{timeBean.weekDayList[index].week}}</view>
       <view class='dateType'>{{timeBean.weekDayList[index].day}}</view>
       <!-- <text class='iconfont icon-mifan' style='color:#fff'></text> -->
     </view>

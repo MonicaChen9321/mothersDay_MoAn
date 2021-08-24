@@ -6,6 +6,7 @@ Component({
  
   /** * 组件的属性列表 * 用于组件自定义设置 */
   properties: {
+
     timeBean: { // 属性名 在wxml调用组件时利用该属性传递组件显示的数据
       type: Object, // 类型（必填），目前接受的类型包括：String, Number, Boolean, Object, Array, null（表示任意类型） 
       value: ''// 属性初始值（可选），如果未指定则会根据类型选择一个
@@ -28,5 +29,14 @@ Component({
       var index = e.currentTarget.dataset.index
       this.triggerEvent("dayClick", index);
     },
+
+    todayClick: function (e) {
+      var index = e.currentTarget.dataset.index;
+      console.log(e);
+    }
+
+
+
+
   }
 })

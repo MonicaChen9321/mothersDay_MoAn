@@ -28,6 +28,11 @@ function getWeekDayList(selectWeek) {
     weekDayList: [],
     year: '',
     month: '',
+
+    nowDay: 0,
+    nowWeek: '',
+    nowMonth: '',
+    nowYear: '',
   }
   for (var i = 0; i < 7; i++) {
     var weekDay = {
@@ -43,6 +48,12 @@ function getWeekDayList(selectWeek) {
   timeBean.year = getYear(selectWeekTime);
   timeBean.month = getMonth(selectWeekTime);
   timeBean.selectDay = getCurrenrWeek();
+
+  timeBean.nowDay = getNowDay();
+  timeBean.nowWeek = getNowWeek();
+  timeBean.nowMonth = getNowMonth();
+  timeBean.nowYear = getNowYear();
+
   return timeBean;
 
 }
@@ -51,16 +62,24 @@ function getWeekDayList(selectWeek) {
 //获取当前时间戳  --
 function getCurrentTimeStamp() {
   var timestamp = new Date().getTime();
-  console.log(timestamp);
   return timestamp
 }
  
 //获取当前周几
 function getCurrenrWeek() {
   var str = "6012345".charAt(new Date().getDay());
-  console.log("currentweek", str);
   return str;
 }
+
+function getNowWeek() {
+  var str = new Date().getDay();
+  var allWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  var week = allWeek[str];
+
+  return week;
+}
+
+
  
 //时间戳获得年月
 function getYearMonth(res) {
@@ -76,12 +95,25 @@ function getYear(res) {
   return y;
 }
 
+function getNowYear() {
+  var time = new Date();
+  var y = time.getFullYear();
+  return y;
+}
+
 function getMonth(res) {
   var time = new Date(res);
   var m = time.getMonth();
   var allMonth = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   var month = allMonth[m];
-  // console.log("month!", month);
+  return month;
+}
+
+function getNowMonth() {
+  var time = new Date();
+  var m = time.getMonth();
+  var allMonth = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var month = allMonth[m];
   return month;
 }
 
@@ -92,6 +124,15 @@ function getMyDay(res) {
   var d = time.getDate();
   return d;
 }
+
+function getNowDay() {
+  var time = new Date();
+  var d = time.getDate();
+  return d;
+}
+
+
+
  
 //时间戳转周几 
 function getWeek(res) {
@@ -108,9 +149,9 @@ function getWeekNumber(res) {
   var y = time.getFullYear();
   var m = time.getMonth() + 1;
   var d = time.getDate();
-  console.log("time", time, "year", y, "month", m, "day", d);
-  console.log("new date", new Date(y + '-' + m + '-' + 20).getDay());
-  console.log("0123456".charAt(new Date(y + '-' + m + '-' + d).getDay()));
+  // console.log("time", time, "year", y, "month", m, "day", d);
+  // console.log("new date", new Date(y + '-' + m + '-' + 20).getDay());
+  // console.log("0123456".charAt(new Date(y + '-' + m + '-' + d).getDay()));
   return "0123456".charAt(new Date(y + '-' + m + '-' + d).getDay());
 }
 
