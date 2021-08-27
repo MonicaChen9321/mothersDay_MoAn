@@ -31,8 +31,7 @@ Component({
     },
 
     todayClick: function (e) {
-      var index = e.currentTarget.dataset.index;
-      console.log(e);
+      this.triggerEvent("todayClick");
     }
 
 
