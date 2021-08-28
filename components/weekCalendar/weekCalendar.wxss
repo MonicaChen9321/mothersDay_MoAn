@@ -1,17 +1,53 @@
 /* compoents/weekCalendar/weekCalendar.wxss */
 .row { 
-  display:flex; flex-direction:row;  
+  display:flex; 
+  flex-direction:row;  
   justify-content: space-around; 
   align-items: center;
   background: #fff;}
+
+.row-title {
+  display:flex; 
+  flex-direction:row;  
+  justify-content: space-between; 
+  align-items: center;
+  background: #fff;
+}
+
+.date-title {
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 96rpx;
+
+  display: flex;
+  align-items: center;
+
+  margin-left: 50rpx;
+}
+
+.monthyear-title {
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 38rpx;
+  
+  display: flex;
+  flex-direction: column;  
+  align-items: left;
+  text-indent: 10px;
+  
+  color: #BCC1CD;
+
+}
  
 .column{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: 5rpx;
-  padding-top: 5rpx;  
+  padding-bottom: 25rpx;
+  padding-top: 20rpx;  
   margin-top: 10rpx;
   flex: 1;
 }
@@ -21,14 +57,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: 5rpx;
-  padding-top: 5rpx;  
+  padding-bottom: 20rpx;
+  padding-top: 20rpx; 
   margin-left: 5rpx;
   margin-right: 5rpx;
   margin-top: 10rpx;
+  margin-bottom: 10rpx;
   flex: 1;
-  border-top-left-radius:20rpx;
-  border-top-right-radius:20rpx;
+  border-radius:30rpx;
+  /* border-top-right-radius:20rpx; */
   background: #FF7648;
   color: white;
 }
@@ -39,13 +76,24 @@
 }
  
 .dateType{
+  font-family: IBM Plex Sans;
   font-size: 35rpx;
   font-weight:bold;
 }
  
 .weekType{
+  font-family: IBM Plex Sans;
   font-size: 28rpx;
-  color: darkgrey;
+  color: #C3C8D2;
+  margin-bottom: 15rpx;
+}
+
+.select-weekType{
+  font-family: IBM Plex Sans;
+  font-size: 28rpx;
+  color:white;
+  font-weight: bold;
+  margin-bottom: 15rpx;
 }
  
 .line{
@@ -57,8 +105,8 @@
 .line-shadow{
   height: 3rpx;
   width: 100%;
-  background-color: gainsboro;
-  box-shadow:5px 0px 5px 0px gainsboro;
+  background-color: #FAF9F9;
+  box-shadow:5px 0px 5px 0px #FAF9F9;
 }
  
 @font-face {font-family: "iconfont";
@@ -90,21 +138,20 @@
 .todayButton {
   background-color: #E9F4EF;
   color: #4DC591;
-  /* position: absolute; */
-  width: 118px;
-  height: 43px;
-  /* left: 200px;
-  top: 30px; */
-  border-radius: 10px;
-  border: 1px solid #E9F4EF;
+  width: 240rpx;
+  height: 86rpx;
+  border-radius: 20rpx;
 
   font-family: IBM Plex Sans;
   font-weight: 600;
-  font-size: 22px;
-  line-height: 36px;
+  font-size: 44rpx;
+  /* line-height: 36px; */
 
-  display:flex; flex-direction:row;  
+  display:flex; 
+  flex-direction:row;  
   justify-content: space-around; 
   align-items: center;
+
+  margin-right: 55rpx;
 }
  

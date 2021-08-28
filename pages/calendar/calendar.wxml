@@ -7,4 +7,4 @@
 
 <!-- <van-button type="primary">button</van-button> -->
 
-<weekCalendar timeBean="{{timeBean}}" bind:lastWeek="lastWeek" bind:nextWeek="nextWeek" bind:dayClick="dayClick"></weekCalendar>
+<weekCalendar timeBean="{{timeBean}}" bind:lastWeek="lastWeek" bind:nextWeek="nextWeek" bind:dayClick="dayClick" bind:todayClick = "todayClick"></weekCalendar>

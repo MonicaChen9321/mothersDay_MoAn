@@ -67,7 +67,17 @@ Page({
     })
   },
 
+  todayClick:function(e) {
+    var time = new Date();
+    var date_time = time.getDate();
+    // var time = new Date();
 
+    this.setData ({
+      timeBean: util.getWeekDayList(this.data.selectWeek),
+      date: date_time,
+    })
+
+  },
 
 
 
@@ -80,9 +90,9 @@ Page({
 
     var time = new Date();
     var date_time = time.getDate();
-    var month_time = time.getMonth
-    console.log("timeout", time)
-    console.log("dateout", date_time)
+    // var month_time = time.getMonth
+    // console.log("timeout", time)
+    // console.log("dateout", date_time)
 
     this.setData({
       timeBean: util.getWeekDayList(this.data.selectWeek),
